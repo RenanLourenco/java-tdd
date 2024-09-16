@@ -4,12 +4,17 @@ import main.br.com.renan.domain.Client;
 
 public class ClientDAO implements IClientDAO{
     @Override
-    public void create(Client client) {
-
+    public Boolean create(Client client) {
+        return true;
     }
 
     @Override
     public Client findByCpf(String cpf) {
         return null;
+    }
+
+    @Override
+    public Boolean delete(String cpf) {
+        return true;
     }
 }

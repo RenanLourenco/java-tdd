@@ -5,8 +5,8 @@ import main.br.com.renan.domain.Client;
 
 public class ClientDAOMock implements IClientDAO {
     @Override
-    public void create(Client client) {
-
+    public Boolean create(Client client) {
+        return true;
     }
 
     @Override
@@ -14,5 +14,10 @@ public class ClientDAOMock implements IClientDAO {
         Client client = new Client();
         client.setCpf(cpf);
         return client;
+    }
+
+    @Override
+    public Boolean delete(String cpf) {
+        return true;
     }
 }

@@ -12,12 +12,22 @@ public class ClientService implements IClientService{
     }
 
     @Override
-    public void save(Client client) {
-        clientDAO.create(client);
+    public Boolean save(Client client) {
+        return clientDAO.create(client);
     }
 
     @Override
     public Client findByCpf(String cpf) {
         return this.clientDAO.findByCpf(cpf);
+    }
+
+    @Override
+    public Boolean exclude(String cpf) {
+        return this.clientDAO.delete(cpf);
+    }
+
+    @Override
+    public void update(Client client) {
+        this.clientDAO.update(client);
     }
 }

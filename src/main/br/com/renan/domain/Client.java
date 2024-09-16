@@ -1,6 +1,6 @@
 package main.br.com.renan.domain;
 
-public class Client {
+public class Client implements Persistent {
     private String cpf;
     private String name;
     private String tel;
